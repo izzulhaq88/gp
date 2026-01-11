@@ -180,6 +180,53 @@ h2{
   color:var(--muted);
 }
 
+/* ================= GP TEAM (SPECIAL) ================= */
+.gp-team{
+  margin-top:4rem;
+  padding:3.5rem 2rem;
+  border-radius:28px;
+  border:1px dashed #dc262640;
+  background:
+    radial-gradient(circle at top,#7f1d1d40,#0b0b0f);
+  text-align:center;
+}
+
+.gp-team h3{
+  font-size:1.6rem;
+  margin-bottom:1rem;
+  color:#f87171;
+}
+
+.gp-team p{
+  max-width:760px;
+  margin:0 auto 2rem;
+  color:var(--muted);
+}
+
+.gp-stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1.5rem;
+}
+
+.gp-stat{
+  background:#0f0f15;
+  border:1px solid #1f1f28;
+  border-radius:20px;
+  padding:2rem;
+}
+
+.gp-stat strong{
+  display:block;
+  font-size:2.2rem;
+  color:#f87171;
+}
+
+.gp-stat span{
+  font-size:.9rem;
+  color:var(--muted);
+}
+
 /* ================= PROJECT DESC ================= */
 .highlight{
   background:radial-gradient(circle at top,#7f1d1d,#0b0b0f);
@@ -208,6 +255,25 @@ footer{
   opacity:1;
   transform:none;
 }
+  .avatar-img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:0 auto 1rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#dc2626,#7f1d1d);
+}
+
+.avatar-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+}
+
 </style>
 </head>
 
@@ -234,45 +300,112 @@ footer{
 
 <section id="tim">
   <!-- Ketua -->
-  <div class="team-group reveal">
-    <h3>Ketua Project</h3>
-    <div class="card-grid">
-      <div class="card">
-        <div class="avatar">KP</div>
-        <h4>Head</h4>
-        <span>zulhaq.std</span>
+<!-- ================= KETUA PROJECT ================= -->
+<div class="team-group reveal">
+  <h3>Ketua Project</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/zul.wedp.webp" alt="Ketua Project" onerror="this.remove(); this.parentElement.textContent='ZW'">
       </div>
+      <h4>Head</h4>
+      <span>zulhaq.std</span>
     </div>
   </div>
+</div>
 
-  <!-- Developer -->
-  <div class="team-group reveal">
-    <h3>Developer</h3>
-    <div class="card-grid">
-      <div class="card"><div class="avatar">DV</div><h4>Developer 1</h4><span>GPxAbydzar</span></div>
-      <div class="card"><div class="avatar">DV</div><h4>Developer 2</h4><span>GPxKyle</span></div>
-      <div class="card"><div class="avatar">DV</div><h4>Developer 3</h4><span>GPxKyle</span></div>
+<!-- ================= DEVELOPER ================= -->
+<div class="team-group reveal">
+  <h3>Developer</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/developer1.webp" alt="Developer 1" onerror="this.remove(); this.parentElement.textContent='DV1'">
+      </div>
+      <h4>Developer 1</h4>
+      <span>GPxAbydzar</span>
+    </div>
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/developer2.webp" alt="Developer 2" onerror="this.remove(); this.parentElement.textContent='DV2'">
+      </div>
+      <h4>Developer 2</h4>
+      <span>GPxKyle</span>
+    </div>
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/developer3.webp" alt="Developer 3" onerror="this.remove(); this.parentElement.textContent='DV3'">
+      </div>
+      <h4>Developer 3</h4>
+      <span>GPxKyle</span>
     </div>
   </div>
+</div>
 
-  <!-- Admin -->
-  <div class="team-group reveal">
-    <h3>Admin</h3>
-    <div class="card-grid">
-      <div class="card"><div class="avatar">AD</div><h4>Admin 1</h4><span>GPxDemyah</span></div>
-      <div class="card"><div class="avatar">AD</div><h4>Admin 2</h4><span>GPxSayuran</span></div>
-      <div class="card"><div class="avatar">AD</div><h4>Admin 3</h4><span>GPxSecrenda</span></div>
+<!-- ================= ADMIN ================= -->
+<div class="team-group reveal">
+  <h3>Admin</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/admin1.webp" alt="Admin 1" onerror="this.remove(); this.parentElement.textContent='AD1'">
+      </div>
+      <h4>Admin 1</h4>
+      <span>GPxDemyah</span>
+    </div>
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/admin2.webp" alt="Admin 2" onerror="this.remove(); this.parentElement.textContent='AD2'">
+      </div>
+      <h4>Admin 2</h4>
+      <span>GPxSayuran</span>
+    </div>
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/admin3.webp" alt="Admin 3" onerror="this.remove(); this.parentElement.textContent='AD3'">
+      </div>
+      <h4>Admin 3</h4>
+      <span>GPxSecrenda</span>
     </div>
   </div>
+</div>
 
-  <!-- Support -->
-  <div class="team-group reveal">
-    <h3>Support</h3>
-    <div class="card-grid">
-      <div class="card">
-        <div class="avatar">SP</div>
-        <h4>Support 1</h4>
-        <span>GPxWife</span>
+<!-- ================= SUPPORT ================= -->
+<div class="team-group reveal">
+  <h3>Support</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="avatar avatar-img">
+        <img src="avatars/support1.webp" alt="Support 1" onerror="this.remove(); this.parentElement.textContent='SP1'">
+      </div>
+      <h4>Support 1</h4>
+      <span>GPxWife</span>
+    </div>
+  </div>
+</div>
+
+  <!-- GP TEAM -->
+  <div class="gp-team reveal">
+    <h3>GP Team</h3>
+    <p>
+      GP Team adalah komunitas besar pendukung Galeri Pemula yang
+      berkontribusi dalam testing, ide, feedback, dokumentasi,
+      dan penyebaran project. Karena jumlahnya banyak dan terus
+      bertambah, anggota GP Team tidak ditampilkan satu per satu.
+    </p>
+
+    <div class="gp-stats">
+      <div class="gp-stat">
+        <strong>10+</strong>
+        <span>Anggota Aktif</span>
+      </div>
+      <div class="gp-stat">
+        <strong>Internal</strong>
+        <span>Tester & Evaluator</span>
+      </div>
+      <div class="gp-stat">
+        <strong>Komunitas</strong>
+        <span>Dukungan & Kolaborasi</span>
       </div>
     </div>
   </div>
@@ -295,7 +428,6 @@ footer{
 </footer>
 
 <script>
-/* Reveal on Scroll */
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
