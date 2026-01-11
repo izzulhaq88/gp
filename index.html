@@ -75,7 +75,6 @@ header{
   overflow:hidden;
 }
 
-/* Background Image */
 header::before{
   content:"";
   position:absolute;
@@ -87,7 +86,6 @@ header::before{
   z-index:-2;
 }
 
-/* Glow Animation */
 header::after{
   content:"";
   position:absolute;
@@ -190,6 +188,60 @@ h2{
   display:block;
 }
 
+/* ================= PLANNING ================= */
+.planning{
+  margin-top:3rem;
+  background:linear-gradient(180deg,#120808,#0b0b0f);
+  border-radius:28px;
+  padding:3rem 2rem;
+  border:1px solid #1f1f28;
+}
+
+.progress-wrap{
+  margin-top:2rem;
+}
+
+.progress-bar{
+  height:14px;
+  background:#1f1f28;
+  border-radius:999px;
+  overflow:hidden;
+  position:relative;
+}
+
+.progress-fill{
+  height:100%;
+  width:33%;
+  background:linear-gradient(90deg,#f87171,#dc2626);
+  animation:loading 2.5s ease;
+}
+
+@keyframes loading{
+  from{width:0}
+  to{width:33%}
+}
+
+.plan-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+  margin-top:2rem;
+}
+
+.plan{
+  padding:1.2rem 1.4rem;
+  border-radius:16px;
+  border:1px solid #1f1f28;
+  background:#0f0f15;
+  color:var(--muted);
+}
+
+.plan.active{
+  border-color:var(--accent);
+  color:var(--text);
+  box-shadow:0 0 0 1px #dc262640 inset;
+}
+
 /* ================= HIGHLIGHT ================= */
 .highlight{
   background:radial-gradient(circle at top,#7f1d1d,#0b0b0f);
@@ -227,7 +279,8 @@ footer{
 <nav>
   <strong>Galeri Pemula</strong>
   <div>
-    <a href="#tentang">Tentang</a>
+    <a href="tentang.html">Team</a>
+    <a href="#planning">Planning</a>
     <a href="#preview">Preview</a>
     <a href="#opensource">Open Source</a>
     <a href="#sponsor">Sponsor</a>
@@ -255,6 +308,31 @@ footer{
     <div class="card"><h3>Petualangan</h3><p class="muted">Eksplorasi gunung dan checkpoint edukatif.</p></div>
     <div class="card"><h3>Fleksibel</h3><p class="muted">Materi mudah disesuaikan guru.</p></div>
     <div class="card"><h3>Interaktif</h3><p class="muted">Belajar aktif, bukan hafalan.</p></div>
+  </div>
+</section>
+
+<section id="planning" class="reveal">
+  <h2>Planning Project</h2>
+  <p class="muted">Tahapan pengembangan game dari awal hingga rilis.</p>
+
+  <div class="planning">
+    <div class="progress-wrap">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <p class="muted" style="margin-top:.8rem">Progress saat ini: <strong>Testing Internal</strong></p>
+    </div>
+
+    <div class="plan-list">
+      <div class="plan active">Building Game</div>
+      <div class="plan active">Testing Internal</div>
+      <div class="plan">Revisi</div>
+      <div class="plan">Testing Internal 2</div>
+      <div class="plan">Revisi</div>
+      <div class="plan">Demo 3 Sekolah</div>
+      <div class="plan">Revisi Final</div>
+      <div class="plan">Launching</div>
+    </div>
   </div>
 </section>
 
@@ -294,7 +372,6 @@ footer{
 </footer>
 
 <script>
-/* ================= REVEAL ON SCROLL ================= */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("active");
@@ -303,7 +380,6 @@ const observer = new IntersectionObserver(entries=>{
 
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
-/* ================= CARD TILT ================= */
 document.querySelectorAll(".card").forEach(card=>{
   card.addEventListener("mousemove",e=>{
     const r = card.getBoundingClientRect();
