@@ -6,6 +6,22 @@
 <title>Galeri Pemula – Game Edukasi Roblox</title>
 
 <style>
+  /* Video YouTube Responsive */
+.video-wrapper{
+  position:relative;
+  width:100%;
+  padding-top:56.25%; /* 16:9 */
+  background:#000;
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
 /* ================= ROOT ================= */
 :root{
   --bg:#0b0b0f;
@@ -338,14 +354,31 @@ footer{
 
 <section id="preview" class="reveal">
   <h2>Preview Pengembangan</h2>
-  <p class="muted">Cuplikan awal dunia game.</p>
+  <p class="muted">Cuplikan awal dunia game & proses pengembangan.</p>
 
   <div class="preview-grid">
-    <div class="preview"><img src="preview1.webp" alt="Preview Dunia Game 1"></div>
-    <div class="preview"><img src="preview2.webp" alt="Preview Dunia Game 2"></div>
-    <div class="preview"><img src="preview3.webp" alt="Preview Dunia Game 3"></div>
+    <div class="preview">
+      <img src="preview1.webp" alt="Preview Dunia Game 1">
+    </div>
+
+    <div class="preview">
+      <img src="preview2.webp" alt="Preview Dunia Game 2">
+    </div>
+
+    <!-- VIDEO YOUTUBE -->
+    <div class="preview">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/AnSgAZY6g6I"
+          title="Preview Gameplay Game Edukasi Roblox"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <section id="opensource" class="highlight reveal">
   <h2>Gratis & Open Source</h2>
